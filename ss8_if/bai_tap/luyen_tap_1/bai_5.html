@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+// Xếp hạng học lực của học sinh
+<script>
+    let test = parseFloat(prompt("Input test"));
+    let score = parseFloat(prompt("Input score"));
+    let score2 = parseFloat(prompt("Input score2"))
+    let average = (test + score + score2*2)/4;
+    if (average >9){
+        document.write("Excellent");
+    }else if (average >=7){
+        document.write("Good");
+    }else if (average >=6){
+        document.write("Average");
+    }else {
+        document.write("Blow")
+    }
+</script>
+</body>
+</html>

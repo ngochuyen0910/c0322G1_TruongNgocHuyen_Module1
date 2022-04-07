@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc nhất</title>
+</head>
+<body>
+//Giải phương trình bậc nhất
+<script>
+    let a = prompt('a')
+    let b = prompt('b')
+        if (a == 0 && b == 0){
+            alert('Phương trình vô số nghiệm');
+        }
+        else if (a != 0 && b == 0){
+            alert('Phương trình có nghiệm x = 0');
+        }
+        else if (a == 0 && b != 0){
+            alert('Phương trình vô nghiệm');
+        }
+        else {
+            alert('Phương trình có nghiệm x = ' + (-b/a));
+        }
+</script>
+</body>
