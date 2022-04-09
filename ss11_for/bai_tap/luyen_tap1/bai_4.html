@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fabonacci chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let f1 = 0;
+    let f2 = 1;
+    let fabonacci;
+    for (let i = 1; i <= 20; i++) {
+        fabonacci = f1 + f2;
+        f1 = f2;
+        f2 = fabonacci;
+        if (fabonacci % 5 === 0){
+            document.write("Số đầu tiên fabonacci chia hết cho 5 là "+ fabonacci );
+            break;
+        }
+    }
+</script>
+</body>
+</html>
