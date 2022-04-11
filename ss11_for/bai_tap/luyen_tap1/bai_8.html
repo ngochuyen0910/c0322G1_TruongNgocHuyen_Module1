@@ -6,7 +6,18 @@
 </head>
 <body>
 <script>
-
+    let number = parseInt(prompt("Nhập vào số muốn đoán"));
+    let ramdom
+    ramdom = Math.floor(Math.random() * 10);
+    if (ramdom === number) {
+        alert("Bạn đã đoán đúng");
+    } else {
+        while (ramdom !== number) {
+            alert("Bạn đoán sai số đúng là " + ramdom);
+            number = parseInt(prompt("Nhập vào số muốn đoán"));
+        }
+        alert("Bạn đoán đúng");
+    }
 </script>
 </body>
 </html>

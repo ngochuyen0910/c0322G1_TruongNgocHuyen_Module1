@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Số nguyên tố</title>
 </head>
 <body>
 <script>
-
+    let number = 2;
+    let count = 0;
+    while (count < 20) {
+        let flag = true;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag === true) {
+            count++
+            document.write(number + "<br>")
+        }
+        number++
+    }
 
 </script>
 </body>
