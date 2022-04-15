@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = []
+    let soam = []
+    for (let i = 0; i < 10; i++) {
+        x[i] = parseInt(prompt("Input number"));
+    }
+    document.write("x = [" + x + "]<br>");
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] <0) {
+            soam.push(x[i])
+        }
+    }
+    document.write("Số nguyên âm : "+ soam)
+    document.write("Số nguyên âm : "+ soam.length)
+</script>
+</body>
+</html>

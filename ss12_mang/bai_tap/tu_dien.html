@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="world">
+<input type="button" value="Dịch" onclick="trans()">
+<p id="tiengviet"></p>
+<script>
+    let english = ["hello", "table", "student", "teacher", "school"];
+    let vietnam = ["xin chao", "ban", "hoc sinh", "giao vien", "truong hoc"];
+    function trans() {
+        let tienganh = document.getElementById("world").value;
+        for (let i = 0; i < english.length; i++) {
+            if (english[i] === tienganh) {
+                document.getElementById("tiengviet").innerText = vietnam[i];
+                break;
+            } else if (vietnam[i] === tienganh) {
+                document.getElementById("tiengviet").innerText = english[i];
+                break;
+            } else {
+                document.getElementById("tiengviet").innerText ="Không tìm thấy";
+            }
+        }
+    }
+</script>
+</body>
+</html>

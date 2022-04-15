@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = []
+    let sum = 0
+    let average
+    for (let i = 0; i < 10; i++) {
+        x[i] = parseFloat(prompt("Input number"));
+        sum = sum + x[i]
+        average = sum / (x.length)
+    }
+    document.write("x = [" + x + "]<br>");
+    document.write("average =" + average + "<br>");
+    let max = x[0];
+    for (let i = 1; i < x.length; i++) {
+        if (x[i] > max) {
+            max = x[i];
+        }
+    }
+    document.write("max = [" + max + "]")
+</script>
+</body>
+</html>

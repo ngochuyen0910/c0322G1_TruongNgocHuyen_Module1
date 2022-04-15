@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = []
+    for (let i = 0; i < 3; i++) {
+        x[i] = parseInt(prompt("Input number"));
+    }
+    document.write("x = [" + x + "]<br>");
+    let min
+    for (let i = 0; i < x.length; i++) {
+        for (let j = 0; j <= i; j++) {
+            if (x[i] > x[j]) {
+                min = x[i]
+                x[i] = x[j]
+                x[j] = min
+            }
+        }
+    }
+        document.write("x giảm dần " +x);
+</script>
+</body>
+</html>

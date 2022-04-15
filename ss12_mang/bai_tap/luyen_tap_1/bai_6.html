@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<script>
+    let x = []
+    let v = parseInt(prompt("Input v"));
+    let flag = true
+    for (let i = 0; i < 3; i++) {
+        x[i]= parseInt(prompt("Input number"))
+        if (x[i] === v) {
+            flag = false
+        }
+    }
+    document.write("x = [" + x + "]")
+    if (flag === false) {
+        document.write("V is in the array")
+    } else {
+        document.write("V is in not the array")
+    }
+</script>
+</body>
+</html>
