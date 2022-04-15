@@ -8,19 +8,24 @@
 <script>
     let str1 = prompt("Nhập chuỗi 1")
     let str2 = prompt("Nhập chuỗi 2")
-    let flag = true
     document.write("Chuỗi 1 : " + str1 + " <br>" + "Chuỗi 2 : " + str2 + " <br>")
-    if (str1.length ==!str2.length) {
-        document.write("2 chuỗi không bằng nhau")
-    } else {
+    let flag = false;
+    if (str1.length ===str2.length) {
         for (let i = 0; i < str1.length; i++) {
-            if (str1[i] ==!str2[i]) {
-                flag = false
-                break;
+            if (str1[i] ===str2[i]) {
+                flag = true;
+            }else {
+                document.write("2 chuỗi không bằng nhau")
+               break;
             }
         }
-    }if(flag===true){
-        document.write("2 chuỗi bằng nhau")
+    }else{
+        document.write("2 chuỗi không bằng nhau")
     }
+    if(flag===true){
+        document.write("2 chuỗi bằng nhau")
+        }
+
+
 </script>
 </body>
