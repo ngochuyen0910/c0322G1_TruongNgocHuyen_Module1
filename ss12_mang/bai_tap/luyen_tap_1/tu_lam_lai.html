@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = []
+    for (let i = 0; i < 4; i++) {
+        arr[i] = parseInt(prompt("Input number"));
+    }
+    document.write(arr);
+    let min;
+    for(let i=1;i<arr.length;i++){
+        for(let j=0;j<=i;j++){
+            if(arr[i]>arr[j]){
+                min=arr[i]
+                arr[i]=arr[j]
+                arr[j]=min
+            }
+        }
+    }document.write(arr)
+</script>
+</body>
+</html>

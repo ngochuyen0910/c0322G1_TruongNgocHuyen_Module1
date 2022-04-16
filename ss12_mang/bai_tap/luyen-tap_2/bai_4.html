@@ -6,9 +6,15 @@
 </head>
 <body>
 <script>
-    let arr = ["hello", "table", "dog", "cat"]
-    document.write("Mảng kí tự là : " + arr + "<br>")
-    document.write("Số từ là " + arr.length)
+    let str = prompt("Nhập chuỗi 1")
+    document.write(str + "<br>")
+    let word = 0;
+    for (let i = 0; i < str.length - 1; i++) {
+        if (str[i] !== " " && str[i + 1] === " ") {
+            word++;
+        }
+    }
+    document.write("số từ trong chuỗi là: " + (word + 1));
 </script>
 </body>
 </html>
