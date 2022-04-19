@@ -6,39 +6,34 @@
 </head>
 <body>
 <h2>Caculator</h2>
-<input style="number"  id="numberInput" value="12"/> <input style="number"  id="numInput" value="12"/>
+<input style="number" id="numberInput"/> <input style="number" id="numInput"/>
 <br>
 <br>
-
-    <button onclick="getValue('add')">Addition(+)</button>
-    <button onclick="getValue('sub')">Subtraction(-)</button>
-    <button onclick="getValue('mul')">Multiplication(X)</button>
-    <button onclick="getValue('div')">Division(/)</button>
-<p>Result Division: <span id="result"></span></p></p>
+<button onclick="getValue('add')">Addition(+)</button>
+<button onclick="getValue('sub')">Subtraction(-)</button>
+<button onclick="getValue('mul')">Multiplication(X)</button>
+<button onclick="getValue('div')">Division(/)</button>
+<p>Result Division: <span id="result"></span></p>
 
 <script>
     function getValue(param) {
-        let a = parseInt( document.getElementById("numberInput").value);
-        let b = parseInt( document.getElementById("numInput").value);
-        if(param === "add"){
-            let Addition = a+b;
+        let a = parseInt(document.getElementById("numberInput").value);
+        let b = parseInt(document.getElementById("numInput").value);
+        if (param === "add") {
+            let Addition = a + b;
             document.getElementById('result').innerHTML = Addition;
-        }
-        else if(param === "sub"){
-            let Subtraction = a-b;
-            document.getElementById('result').innerHTML =Subtraction;
+        } else if (param === "sub") {
+            let Subtraction = a - b;
+            document.getElementById('result').innerHTML = Subtraction;
 
-        }
-        else if(param === "mul"){
-            let Multiplication = a*b;
-            document.getElementById('result').innerHTML =Multiplication;
-        }
-        else if(param === "div"){
-            let Division = a/b;
+        } else if (param === "mul") {
+            let Multiplication = a * b;
+            document.getElementById('result').innerHTML = Multiplication;
+        } else if (param === "div") {
+            let Division = a / b;
             document.getElementById('result').innerHTML = Division;
         }
     }
-
 
 
 </script>

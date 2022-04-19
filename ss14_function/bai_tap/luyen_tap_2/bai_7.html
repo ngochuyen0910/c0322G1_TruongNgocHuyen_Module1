@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi số 2 số nguyên</title>
+</head>
+<body>
+<script>
+    function change(a, b) {
+        let doi
+        doi = a
+        a = b
+        b = doi
+        return (a + " " + b)
+    }
+
+    let x = parseInt(prompt("Input x"));
+    let y = parseInt(prompt("Input y"));
+    document.write(change(x, y))
+</script>
+</body>
+</html>

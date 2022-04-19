@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi của tam giác</title>
+</head>
+<body>
+<script>
+    const PI = 3.14;
+
+    function acreage(r) {
+        let s = Math.pow(r, 2) * PI
+        return s
+    }
+
+    let x = parseFloat(prompt("Input Number "))
+    let y = acreage(x)
+    document.write("Diện tích hình tròn " + y + "<br>")
+
+    function acreage(r) {
+        let c = 2 * r * PI
+        return c
+    }
+
+    let a = parseFloat(prompt("Input number"))
+    let b = acreage(a)
+    document.write("Chu vi hình tròn " + b)
+
+</script>
+</body>
+</html>

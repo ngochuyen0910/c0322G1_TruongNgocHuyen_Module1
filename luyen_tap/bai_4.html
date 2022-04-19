@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = parseInt(prompt("Input n"))
+    let arr = []
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Input array"))
+    }
+    document.write("arr = [" + arr + "]<br>")
+    let counted = [];
+    let count = [];
+    let i = 0;
+    let j = 0;
+    let k = 0;
+    while (k < arr.length) {
+        if (counted.indexOf(arr[k]) < 0) {
+            counted[i] = arr[k];
+            count[i] = 0;
+            for (j = 0; j < arr.length; j++) {
+                if (counted[i] == arr[j]) {
+                    count[i]++;
+                }
+            }
+            i++;
+        } else {
+            k++;
+        }
+    }
+    document.write("counted = [" + counted + "]<br>")
+    document.write("count = [" + count + "]<br>")
+    document.write()
+</script>
 </body>
 </html>

@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính thuế</title>
 </head>
 <body>
-$END$
+<script>
+    let salary = parseInt(prompt("Input money"))
+    if (salary > 15000000) {
+        document.write("Tiền thuế :" + (salary * (20 / 100)) + "<br>");
+        document.write("Tiền lương :" + (salary - (salary * (20 / 100))));
+    } else if (salary > 7000000) {
+        document.write("Tiền thuế :" + (salary * (10 / 100)) + "<br>");
+        document.write("Tiền lương :" + (salary - (salary * (10 / 100))));
+    } else {
+        document.write("Tiền thuế :" + (salary * (5 / 100)) + "<br>");
+        document.write("Tiền lương :" + (salary - (salary * (5 / 100))))
+    }
+</script>
 </body>
 </html>

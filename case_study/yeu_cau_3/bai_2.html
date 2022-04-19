@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //Cho 2 mảng A và B chứa số nguyên.
+    // Tìm ra một mảng đã được sắp xếp chứa các phần tử
+    // xuất hiện trong mảng B nhưng lại không xuất hiện A
+
+    let n = parseInt(prompt("Input n"));
+    let arr1 = []
+    let arr3 = []
+    for (let i = 0; i < n; i++) {
+        arr1[i] = parseInt(prompt("Input arr1"))
+    }
+    document.write("arr1 = [" + arr1 + "]<br>")
+    let m = parseInt(prompt("Input m"));
+    let arr2 = []
+    for (let j = 0; j < m; j++) {
+        arr2[j] = parseInt(prompt("Input arr2"))
+    }
+    document.write("arr2 = [" + arr2 + "]<br>")
+    for (let j = 0; j < arr2.length; j++) {
+        let count = 0
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr2[j] === arr1[i]) {
+                count++
+                break
+            }
+        }
+        if (count === 0) {
+            // document.write(arr2[j] + " ")
+            arr3.push(arr2[j])
+        }
+    }
+    for (let i = 0; i < arr3.length; i++) {
+        for (let j = i + 1; j < arr3.length; j++) {
+            if (arr3[i] === arr3[j]) {
+                arr3.splice(0, j)
+            }
+        }
+    }
+    document.write(arr3.join(' '))
+
+</script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    function text(x) {
+        if (parseInt(x) > 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    let num = parseInt(prompt("Input number"));
+    let b = text(num)
+    if (b) {
+        document.write(num + " Số nguyên dương")
+    } else {
+        document.write(num + " Số nguyên âm")
+    }
+</script>
+</body>
+</html>

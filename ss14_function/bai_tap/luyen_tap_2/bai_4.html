@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function test(x) {
+    //     if (parseInt(x) / 1 === parseInt(x)) {
+    //         return true
+    //     }
+    //     return false
+    // }
+    //
+    // let a = prompt("Input a")
+    // let b = test(a)
+    // if (b) {
+    //     document.write(a + " là kí tự số")
+    // } else {
+    //     document.write(a+ " là kí tự chữ")
+    // }
+    function text(x) {
+        if (isNaN(x) === false) {
+            return false
+        }
+        return true
+    }
+
+    let a = prompt("Input a")
+    let b = test(a)
+    if (b) {
+        document.write(a + "Kí tự số")
+    } else {
+        document.write(a + "kí tự chữ")
+    }
+</script>
+</body>
+</html>

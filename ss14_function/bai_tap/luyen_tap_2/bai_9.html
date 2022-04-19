@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function test(char, arr) {
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (char === arr[i]) {
+                count++
+            }
+        }
+        if (count > 0) {
+            return count
+        }
+        return -1
+    }
+
+    let arr1 = ['a', 'b', 'c', 'c', 'd', 'd', 'e', 'f', 'g', 'k']
+    let char1 = prompt("Input characters")
+    document.write("arr1 = [" + arr1 + "]<br>")
+    let kiemTra = test(char1, arr1)
+    if (kiemTra > 0) {
+        document.write("Có " + kiemTra + " ký tự " + char1 + " trong mảng")
+    } else {
+        document.write("Không có dữ liệu")
+    }
+</script>
+</body>
+</html>

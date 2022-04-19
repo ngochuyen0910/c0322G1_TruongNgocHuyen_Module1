@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
+
 <body>
-$END$
+<img src="anh/pic_bulboff.gif" height="180" width="100" id="imgLight"/>
+ <button onclick="turnoff()">OFF</button>
+ <button onclick="turnon()">ON</button>
+<script>
+    function turnoff() {
+        document.getElementById('imgLight').src ='anh/pic_bulboff.gif';
+    }
+    function turnon() {
+        document.getElementById('imgLight').src ='anh/pic_bulbon.gif';
+    }
+ </script>
 </body>
 </html>

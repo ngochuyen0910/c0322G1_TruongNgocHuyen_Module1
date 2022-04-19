@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = []
+
+    function change(x) {
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last) {
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        }
+        return x
+    }
+
+    let y = []
+    for (let i = 0; i < 10; i++){
+        y[i] = parseInt(prompt("Input number"));
+    }
+    let b = change(y);
+    document.write("Hàm đảo ngược là " + b);
+</script>
+</body>
+</html>

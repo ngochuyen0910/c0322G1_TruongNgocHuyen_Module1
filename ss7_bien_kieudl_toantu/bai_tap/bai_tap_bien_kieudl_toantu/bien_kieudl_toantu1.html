@@ -5,10 +5,11 @@
     <title>Nhập điểm</title>
 </head>
 <body>
+
 <script>
-    let inputphysics = parseInt(prompt("Nhập điểm"));
-    let inputchemistry = parseInt(prompt("Nhập điểm"));
-    let inputbiology = parseInt(prompt("Nhập điểm"));
+    let inputphysics = parseFloat(prompt("Nhập điểm"));
+    let inputchemistry = parseFloat(prompt("Nhập điểm"));
+    let inputbiology = parseFloat(prompt("Nhập điểm"));
     let sum = inputphysics + inputchemistry + inputbiology;
     let average = sum/3;
     alert(sum);

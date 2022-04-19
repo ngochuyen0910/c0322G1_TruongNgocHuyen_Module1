@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Kểm tra kí tự</title>
 </head>
 <body>
-$END$
+<script>
+    let text = prompt("Input text").toLowerCase();
+    switch (text) {
+        case "u":
+        case "a":
+        case "e":
+        case "o":
+        case "i":
+            document.write("Kí tự nguyên âm");
+            break;
+        default:
+            document.write("Kí tự phụ âm");
+    }
+</script>
 </body>
 </html>

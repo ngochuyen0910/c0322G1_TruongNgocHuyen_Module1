@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p onclick="num()">Click me</p>
+<script>
+    function tangso(a) {
+        a++
+        return a
+    }
+
+    function num() {
+        let num = parseInt(prompt("Input number"));
+        let so = tangso(num);
+        alert("Số tăng là " + so);
+    }
+</script>
+</body>
+</html>

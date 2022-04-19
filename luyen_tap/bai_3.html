@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let number = parseInt(prompt("Input number"));
+    let flag = true;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false;
+        }
+    }
+    if(flag===false){
+        document.write(number)
+    }
+</script>
 </body>
 </html>

@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let str = prompt("Input")
+    document.write(str + "<br>")
+    document.write("Có " + str.length + " kí tự<br>")
+    let word = (str[0] !== " ")
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === " " && str[i + 1] !== " ") {
+            word++
+        }
+    }
+    document.write("Có " + word + " từ")
+
+
+</script>
 </body>
 </html>

@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = parseInt(prompt("Input number"));
+    let S = 0
+    for (let i = 1; i < n; i++) {
+        S = S + 1 + 1 / Math.pow(n, 3);
+    }
+    document.write("S = "+ S)
+</script>
 </body>
 </html>

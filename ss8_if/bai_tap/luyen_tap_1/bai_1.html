@@ -5,16 +5,27 @@
     <title>a chia hết cho b </title>
 </head>
 <body>
-// a chia hết cho b
+<p>Nhập số a:</p><input style="number" id="input1"/>
+<p>Nhập số b:</p><input style="number" id="input2"/>
+<p>Kết quả: <span id="kq"></span></p>
 <script>
-    let a = parseInt(prompt("Nhập a"));
-    let b = parseInt(prompt("Nhập b"));
-    if (a % b === 0){
-        alert("a chia hết cho b");
-    }
-    else {
-        alert("a không chia hết cho b");
-    }
+    //let a = parseInt(prompt("Nhập a"));
+    //let b = parseInt(prompt("Nhập b"));
+    //if (a % b === 0){
+        //alert("a chia hết cho b");
+    //}
+    //else {
+       // alert("a không chia hết cho b");
+    //}
+    let a= parseInt(document.getElementById("input1").value);
+    let b= parseInt(document.getElementById("input2").value);
+    if (a%b === 0){
+        document.getElementById("kq").innerText= a chia hết cho b
+
+        }
+
+
 </script>
+
 </body>
 </html>
