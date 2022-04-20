@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(C) {
+            this.C = C;
+        }
+
+        transitionF() {
+            return this.C * 9 / 5 + 32
+        }
+
+        transitionKenvin() {
+            return this.C + 273.15
+        }
+    }
+    let temperature = new Temperature(25)
+    document.write(temperature.transitionF()+"<br>")
+    document.write(temperature.transitionKenvin())
+</script>
+</body>
+</html>
