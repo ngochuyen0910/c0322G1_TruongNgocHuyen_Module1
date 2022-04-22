@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        decreaseWeight() {
+            if (this.weight > 0) {
+                this.weight--
+            }
+        }
+
+        isEmpty() {
+            if (this.weight === 0) {
+                return true
+            } else {
+                return false
+            }
+
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name
+            this.gender = gender
+            this.weight = weight
+        }
+
+        setName(name) {
+            this.name = name
+        }
+
+        getName() {
+            return this.name
+        }
+
+        setWight(weight) {
+            this.weight = weight
+        }
+
+        getWeight() {
+            return this.weight
+        }
+
+        setGender(gender) {
+            this.gender = gender
+        }
+
+        isMale() {
+            if (this.gender === "Male") {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        checkApple(apple) {
+            if (apple.getWeight() > 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                this.weight++
+                apple.decreaseWeight()
+            }
+        }
+
+        say(content) {
+            document.write(this.name + ": " + content)
+        }
+    }
+
+    let apple = new Apple(10)
+    let adam = new Human("Adam", "Male", 65)
+    let eva = new Human("Eva", "Female", 45)
+    document.write("Apple có trọng lượng là: " + apple.getWeight() + "<br>")
+    document.write(" Adam có cân nặng là: " + adam.getWeight() + "<br>")
+    document.write(" Eva có cân nặng là: " + eva.getWeight())
+    document.write("<hr>")
+    while (apple.isEmpty() === false) {
+        eva.eat(apple)
+        adam.eat(apple)
+    }
+
+    document.write("Apple có trọng lượng là: " + apple.getWeight() + "<br>")
+    adam.say("Em ăn đi" + "<br>")
+    document.write(" Adam có cân nặng là: " + adam.getWeight() + "<br>")
+    eva.say("Anh ăn đi" + "<br>")
+    document.write(" Eva có cân nặng là: " + eva.getWeight())
+
+</script>
+</body>
+</html>
