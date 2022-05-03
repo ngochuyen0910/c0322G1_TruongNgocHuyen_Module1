@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số kí tự chung</title>
+</head>
+<body>
+<script>
+    // let s1 = 'aabbcc'
+    // let s2 = 'adccaa'
+    // let arr1 = s1.split("")
+    // let arr2 = s2.split("")
+    // let count=0;
+    // for (let i = 0; i < arr1.length; i++) {
+    //     for (let j = 0; j < arr2.length; j++) {
+    //         if(arr1[i]===arr2[j]){
+    //             arr1.splice(i,1);
+    //             arr2.splice(j,1);
+    //             count++;
+    //             i--
+    //             break;
+    //         }
+    //     }
+    // }document.write(count)
+
+    let s1 = 'aabbcc'
+    let s2 = 'adccaa'
+    let count=0;
+    for (let i = 0; i < s1.length; i++) {
+        for (let j = 0; j < s2.length; j++) {
+            if(s1[i]===s2[j]){
+                s1.replace(s1[i],"")
+                count++;
+                break;
+            }
+        }
+    }document.write(count)
+</script>
+</body>
+</html>

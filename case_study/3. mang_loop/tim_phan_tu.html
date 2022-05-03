@@ -39,12 +39,21 @@
     for (let i = 0; i < arr3.length; i++) {
         for (let j = i + 1; j < arr3.length; j++) {
             if (arr3[i] === arr3[j]) {
-                arr3.splice(0, j)
+                arr3.splice(j, 1)
+                j--
             }
         }
     }
-    document.write(arr3.join(' '))
-
+    document.write(arr3)
 </script>
 </body>
 </html>
+let a = [7, 2, 5, 3, 5, 3];
+let b = [7, 2, 5, 4, 6, 3, 5, 3];
+let c = [];
+for (let i = 0; i < b.length; i++) {
+if (a.indexOf(b[i]) === -1 && c.indexOf(b[i]) === -1) {
+c.push(b[i])
+}
+}
+document.write(c)

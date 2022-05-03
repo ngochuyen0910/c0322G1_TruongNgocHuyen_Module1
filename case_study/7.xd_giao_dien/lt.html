@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let str= ("abbcnncd")
+    let arr = str.split("")
+    let count = 1
+    for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i] + " ");
+    }
+    for (let i = 0; i < arr.length; i++) {
+         if (arr[i] === "") {
+             continue;
+        }
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                count += 1;
+                 arr[j] = "";
+            }
+        }
+        document.write("<br>" + arr[i] + ": " + count + " lần");
+        count = 1;
+    }
+    // let str = ("abbcnncd")
+    // let count = 1
+    // for (let i = 0; i < str.length; i++) {
+    //     for (let j = i + 1; j < str.length; j++) {
+    //         if (str[i] === str[j]) {
+    //             str = str.replace(str[j], "")
+    //             count += 1;
+    //             break;
+    //         }
+    //     }
+    //     document.write("<br>" + str[i] + ": " + count + " lần")
+    //     count = 1
+    // }
+
+</script>
+</body>
+</html>
+
+

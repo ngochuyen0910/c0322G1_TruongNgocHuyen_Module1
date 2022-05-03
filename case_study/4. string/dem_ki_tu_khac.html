@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số kí tự khác nhau</title>
+</head>
+<body>
+<script>
+    // let s = prompt("Input s")
+    // let arr = s.split("")
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //         if (arr[i] === arr[j]) {
+    //             arr.splice(j, 1);
+    //             j--;
+    //         }
+    //     }
+    // }
+    // document.write("có kí tự khác nhau là " + arr + "<br>")
+    // document.write("số kí tự khác nhau là " + arr.length)
+    let s1 = 'aabbcc'
+    let s2 = 'adccaa'
+    let count=0;
+    for (let i = 0; i < s1.length; i++) {
+        for (let j = 0; j < s2.length; j++) {
+            if(s1[i]===s2[j]){
+                s1.replace(s1[i],"")
+                count++;
+                break;
+            }
+        }
+    }document.write(count)
+</script>
+</body>
+</html>

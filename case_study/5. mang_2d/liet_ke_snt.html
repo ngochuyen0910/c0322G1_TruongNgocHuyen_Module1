@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt(" Input n"));
+    let m = parseInt(prompt(" Input m"));
+    let arr = [];
+    let primeArr = []
+    for (let i = 0; i < n; i++) {
+        arr[i] = [];
+        for (let j = 0; j < m; j++) {
+            arr[i][j] = parseInt(prompt(" Input arr"));
+            document.write(arr[i][j] + ' ');
+        }
+        document.write("<br>");
+    }
+    // let count = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         let flag = true;
+    //         if (arr[i][j] < 2) {
+    //             flag = false;
+    //         }
+    //         for (let k = 2; k < arr[i][j]; k++) {
+    //             if (arr[i][j] % k === 0) {
+    //                 flag = false;
+    //                 break;
+    //             }
+    //         }
+    //         if (flag === true) {
+    //             document.write(arr[i][j] + " ");
+    //             count++
+    //         }
+    //     }
+    // }
+    // document.write("<br>");
+    // document.write("Số tố nguyên tố trong mảng là " + count);
+    function checkPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (checkPrime(arr[i][j])) {
+                primeArr.push(arr[i][j])
+            }
+        }
+    }
+    document.write("Số nguyên tố là :" + primeArr)
+    // cách3
+    // function isPrime(num) {
+    //     let result
+    //     if (num < 2) {
+    //         result = "không phải snt"
+    //     }
+    //     for (let i = 2; i < num; i++) {
+    //         if (num % i === 0) {
+    //             result = "không phải snt"
+    //             break;
+    //         } else {
+    //             result = "snt"
+    //         }
+    //     }
+    //     return result
+    // }
+    //
+    // let number = parseInt(prompt("Input number"))
+    // document.write(isPrime(number)
+</script>
+</body>
+</html>

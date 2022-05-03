@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm min và max</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt("Input m"))
+    let n = parseInt(prompt("Input n"))
+    let arr = []
+    for (let i = 0; i < m; i++) {
+        arr[i] = []
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = parseInt(prompt("Input arr"))
+            document.write(arr[i][j] + ' ')
+        }
+        document.write("<br>")
+    }
+    document.write()
+
+    function maxMin() {
+        let min = arr[0][0]
+        let max = arr[0][0]
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < min) {
+                    min = arr[i][j]
+                }
+                if (arr[i][j] > max) {
+                    max = arr[i][j]
+                }
+            }
+        }
+        document.write(min + "<br>")
+        document.write(max)
+    }
+
+    maxMin()
+    // cach2
+    // function maxMin() {
+    //     let min = arr[0][0]
+    //     let max = arr[0][0]
+    //     let arr1 = []
+    //     for (let i = 0; i < arr.length; i++) {
+    //         for (let j = 0; j < arr[i].length; j++) {
+    //             if (arr[i][j] < min) {
+    //                 min = arr[i][j]
+    //             }
+    //             if (arr[i][j] > max) {
+    //                 max = arr[i][j]
+    //             }
+    //         }
+    //     }
+    //     arr1.push(min)
+    //     arr1.push(max)
+    //     return arr1
+    // }
+    //
+    // document.write(maxMin(arr)[0])
+    // document.write(maxMin(arr)[1])
+</script>
+</body>
+</html>
